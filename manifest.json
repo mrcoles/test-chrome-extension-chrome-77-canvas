@@ -1,0 +1,12 @@
+{
+  "name": "test-chrome-extension-chrome-77-canvas",
+  "version": "0.1",
+  "manifest_version": 2,
+  "description": "Test issues with canvas in chrome 77",
+  "options_page": "test.html",
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "minimum_chrome_version": "63",
+  "permissions": ["activeTab"]
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE htm>
+<html lang="en">
+  <head>
+    <meta charset="utf8" />
+    <title>Canvas Test</title>
+    <style>
+      .row {
+        display: flex;
+        align-items: flex-start;
+        padding: 0 20px;
+        margin: 20px 0;
+      }
+      .col {
+        box-sizing: border-box;
+        width: 50%;
+        padding: 0 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="row"><h1 class="col" style="width: 100%">Multi-Canvas Test</h1></div>
+    <div class="row">
+      <p class="col" style="width: 100%">
+        A test for Chrome 77 to recreate issues with canvas elements yielding a blank
+        output when they are large. On my Mac OSX 10.14.6 with Chrome 77.0.3865.75 it
+        appears to break between 16000–18000px.
+      </p>
+    </div>
+    <div class="row">
+      <form id="form" class="col" style="width: 100%">
+        <label for="canvas-height">Main canvas height:</label>
+        <input id="canvas-height" type="number" value="20000" />
+        <button type="submit">Generate</button>
+        <span id="indicator" style="display:none">generating...</span>
+      </form>
+    </div>
+    <div id="headers" class="row"></div>
+    <div id="content" class="row"></div>
+    <script src="test.js"></script>
+  </body>
+</html>
